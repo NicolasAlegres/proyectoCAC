@@ -1,5 +1,6 @@
 body {
     background-color: rgba(75, 145, 224, 0.623);
+    background-image: url(/imagenes/fondo.png);
 }
 
 a {
