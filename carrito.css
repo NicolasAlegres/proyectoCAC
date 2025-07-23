@@ -1,0 +1,54 @@
+.btn-comprar {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 600px) {
+  .btn-comprar {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6); /* fondo oscuro */
+}
+
+.modal-contenido {
+  background-color: rgb(20, 17, 17);
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.cerrar {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: red;
+}

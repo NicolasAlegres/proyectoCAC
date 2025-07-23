@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+       
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resumen de la compra</h1>
+    <div class="resumen" id="resumen-compra">
+        <!-- Acá va el resumen del producto cargado con JavaScript -->
+    </div>
+<div id="resumenCompra"></div>
+    
+        <form  action="https://formspree.io/f/xnnzjqzr" method="POST">
+        <label>Nombre completo: <input type="text" name="nombre" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Teléfono: <input type="tel" name="telefono" placeholder="Este campo no es obligatorio"></label>
+        <br>
+        
+    <!-- Campo oculto con el resumen de la compra -->
+    <input type="hidden" name="detalle" id="pedidoInput">
+        <button type="submit">Confirmar Compra</button>
+            </form>
+     
+
+
+        <script src="formulario.js" ></script>
+</body>
+</html>
