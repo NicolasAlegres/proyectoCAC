@@ -97,7 +97,7 @@ document.getElementById("finalizarCompra").addEventListener("click", () => {
 
     // **NUEVO: Limpiar el carrito en la página principal ANTES de redirigir**
     sessionStorage.removeItem("carrito"); // Limpia el carrito principal
-    sessionStorage.removeItem("carritoParaCompra"); // Limpia el carrito de respaldo también
+    
 
     // Actualizar el contador del carrito visible inmediatamente
     actualizarContador();
