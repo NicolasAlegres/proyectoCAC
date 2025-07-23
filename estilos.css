@@ -168,7 +168,7 @@ ul {
         padding-right: 15px;
     }
 
-    /* Opcional: si quieres ajustar el padding de la caja blanca del formulario en móviles */
+    /* Opcional: ajustar el padding de la caja blanca del formulario en celulares */
     .form-container {
         padding: 20px;
         /* Reduce el padding interno si lo deseas */
@@ -176,7 +176,7 @@ ul {
         /* Opcional: Si el padre no tiene redondeo, este tampoco */
     }
 
-    /* Puedes añadir aquí otros ajustes para fuentes o inputs en móvil si lo necesitas */
+    /* otros ajustes para fuentes o inputs en móvil si lo necesitas */
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group textarea,
@@ -255,7 +255,7 @@ ul {
         display: block;
     }
     .menu-open-margin {
-  margin-top: 15rem; /* ~240px, ajustalo según altura de tu menú */
+  margin-top: 15rem; /* ~240px,  */
   transition: margin-top 0.5s ease; /* para animar el cambio */
   transition-delay: 0.5s;
 }
