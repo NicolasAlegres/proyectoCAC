@@ -3,7 +3,10 @@
 // Función para actualizar el contador del carrito en el icono
 function actualizarContador() {
     const carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
-    document.getElementById("contador-carrito").textContent = carrito.length;
+    const contadorElemento = document.getElementById("contador-carrito");
+    if (contadorElemento) { // Solo actualiza si el elemento existe
+        contadorElemento.textContent = carrito.length;
+    }
 }
 
 // Agregar productos al carrito al hacer clic en botones "Comprar"
@@ -23,6 +26,7 @@ document.querySelectorAll(".agregar-btn").forEach(btn => {
         sessionStorage.setItem("carrito", JSON.stringify(carrito));
 
         actualizarContador();
+        
         alert(`${producto.nombre} agregado al carrito.`);
     });
 });
@@ -106,7 +110,5 @@ document.getElementById("finalizarCompra").addEventListener("click", () => {
     window.location.href = "conf-compra.html";
 });
 
-// Actualizar contador al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-    actualizarContador();
-});
+
+actualizarContador(); // <-- ESTA LLAMADA SE EJECUTA EN CUANTO EL SCRIPT SE CARGA

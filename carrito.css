@@ -23,7 +23,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 1050; /* Un valor alto para estar por encima de todo, incluso el menú */
   left: 0;
   top: 0;
   width: 100%;
@@ -33,13 +33,14 @@
 }
 
 .modal-contenido {
-  background-color: rgb(20, 17, 17);
+  background-color: rgb(139, 172, 233);
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
 }
 
 .cerrar {

@@ -7,21 +7,16 @@
     <title>Librería Somos Arte</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="carrito.css">
+    <script src="https://kit.fontawesome.com/c31a5ef6a1.js" crossorigin="anonymous" defer></script>
+
 </head>
 
 <body>
     <header>
-        <h1><a class="a" href="index.html">Todos tus libros en un solo lugar!</a></h1>
-        <nav class="menu" id="menu">
-            <a class="logo" href="index.html">SOMOS ARTE</a> <!-- Nombre o logo de tu sitio -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- Botón hamburguesa (solo se ve en celular) -->
-            <ul>
-                <li><a href="cocina.html">Cocina</a></li>
-                <li><a href="ficcion.html">Ficción</a></li>
-                <li><a href="noficcion.html">No ficción</a></li>
-                <li><a href="quienes-somos.html">Quienes Somos</a></li>
-            </ul>
-        </nav>
+        <h1 class="visually-hidden">Librería Somos Arte</h1>
+
+        <div id="navbar-placeholder" data-show-cart="true"></div>
     </header>
     <h2>QUIENES SOMOS.</h2>
     <div class="texto-contenedor">
@@ -30,11 +25,11 @@
             consectetur facilis aliquam mollitia?</h3>
     </div>
 
-    <div class="h2">
-        <h2>NOS ENCONTRAMOS EN</h2>
-    </div>
 
-    <main class="h2">
+    <h2>NOS ENCONTRAMOS EN</h2>
+
+
+    <main class="text-center">
         <section>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5523.043804735889!2d-58.38468184758179!3d-34.60361797604593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1747848912324!5m2!1ses!2sar"
@@ -66,9 +61,10 @@
             </form>
         </div>
 
+        <div id="foot"></div>
 
-        <script src="main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 
 </html>

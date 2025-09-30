@@ -1,0 +1,36 @@
+<nav class="menu" id="menu">
+    <a class="logo" href="index.html">SOMOS ARTE</a>
+
+    <div class="menu-right">
+
+
+
+
+        <div class="nav-item" id="cart-container">
+            <button id="btnCarrito" class="btn btn-primary btn position-relative  btn-carritonav">
+                <i class="fa-solid fa-cart-arrow-down fa-2xl" style="color: #e2dddd;"></i>
+                <span id="contador-carrito"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>
+            <div id="carritoModal" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar">&times;</span>
+                    <h2>Tu carrito</h2>
+                    <div id="productosCarrito"></div>
+                    <button id="finalizarCompra">Finalizar compra</button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <ul>
+
+            <li><a href="cocina.html">Cocina</a></li>
+            <li><a href="ficcion.html">Ficción</a></li>
+            <li><a href="noficcion.html">No ficción</a></li>
+            <li><a href="quienes-somos.html">Quienes Somos</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div> <!-- Botón hamburguesa (solo se ve en celular) -->
+    </div>
+</nav>

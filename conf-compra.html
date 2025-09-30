@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilos.css">
-       
-    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <title></title>
 </head>
+
 <body>
-    <h1>Resumen de la compra</h1>
+    <h1>Confirmar Compra - Librería Somos Arte</h1>
     <div class="resumen" id="resumen-compra">
         <h2>Productos en el carrito:</h2>
         <ul id="lista-productos">
@@ -16,21 +18,25 @@
         </ul>
         <p id="total-compra">Total</p>
     </div>
-<div id="resumenCompra"></div>
-    
-        <form  action="https://formspree.io/f/xnnzjqzr" method="POST">
+    <div id="resumenCompra"></div>
+
+    <form action="https://formspree.io/f/xnnzjqzr" method="POST">
         <label>Nombre completo: <input type="text" name="nombre" required></label>
         <label>Email: <input type="email" name="email" required></label>
         <label>Teléfono: <input type="tel" name="telefono" placeholder="Este campo no es obligatorio"></label>
         <br>
-        
-    <!-- Campo oculto con el resumen de la compra -->
-    <input type="hidden" name="detalle" id="pedidoInput">
-        <button type="submit">Confirmar Compra</button>
-            </form>
-     
 
-            <script src="carrito.js"></script>
-        <script src="formulario.js" ></script>
+        <!-- Campo oculto con el resumen de la compra -->
+        <input type="hidden" name="detalle" id="pedidoInput">
+        <button type="submit">Confirmar Compra</button>
+    </form>
+    <div class="text-center">
+        <a href="index.html" class="boton-inicio">Volver al Inicio</a>
+    </div>
+
+
+   
+    <script src="formulario.js" defer></script>
 </body>
+
 </html>

@@ -1,10 +1,34 @@
 body {
     background-color: rgba(75, 145, 224, 0.623);
-    background-image: url(/imagenes/fondo.png);
+    background-image: url(imagenes/fondo.webp);
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Asegura que el footer se quede abajo */
+#footer-placeholder {
+    margin-top: auto;
+}
+
+
+header {
+    text-align: center;
+    
 }
 
 a {
     text-decoration: none;
+}
+
+header h1 {
+
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
 .texto-contenedor {
@@ -12,19 +36,19 @@ a {
     margin-bottom: 90px;
 }
 
-.h2 {
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    
+}
 
+/* NUEVO: Clase de utilidad para centrar texto o elementos en línea */
+.text-center {
     text-align: center;
 }
 
-ul {
-    font-size: 1.5em;
-
-}
-
-.contenido {
-    flex-grow: 1;
-
+p {
+    margin-bottom: 0;
 }
 
 .redes-pos {
@@ -33,16 +57,7 @@ ul {
     min-height: 100vh;
 }
 
-.redes-sociales-iconos {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
-    padding: 15px 20px;
 
-}
 
 .redes-sociales-iconos {
     position: relative;
@@ -52,7 +67,7 @@ ul {
     gap: 20px;
 
     margin-bottom: 10px;
-    padding: 30px 40px;
+    padding: 1rem;
 
     background: linear-gradient(to right,
             rgba(0, 0, 0, 0) 0%,
@@ -66,7 +81,8 @@ ul {
 }
 
 .card-img-top {
-    height: 500px;
+    width: 100%;
+    aspect-ratio: 8 / 9;
     object-fit: cover;
     object-position: center;
 
@@ -199,7 +215,9 @@ ul {
     padding: 10px 20px;
     position: relative;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+
 }
 
 .menu .logo {
@@ -212,6 +230,7 @@ ul {
     list-style: none;
     gap: 20px;
 }
+
 
 .menu ul li a {
     color: white;
@@ -227,10 +246,19 @@ ul {
     display: none;
     font-size: 2rem;
     cursor: pointer;
+
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre el carrito y los enlaces */
 }
 
 /* RESPONSIVE: menú para celulares */
 @media (max-width: 768px) {
+
     .menu ul {
         max-height: 0;
         overflow: hidden;
@@ -243,32 +271,68 @@ ul {
         left: 0;
         transition: max-height 0.7s ease;
         transition-delay: 0.1s;
-        
+        z-index: 1000;
+
     }
 
     .menu.active ul {
         max-height: 500px;
         /* lo suficiente para mostrar todos los links */
-        
+
     }
 
     .menu-toggle {
         display: block;
     }
-    .menu-open-margin {
-  margin-top: 15rem; /* ~240px,  */
-  transition: margin-top 0.5s ease; /* para animar el cambio */
-  transition-delay: 0.5s;
-}
+
+    
+
+
 }
 
 
-
-.container {
-  transition: margin-top 0.5s ease;
-  transition-delay: 0.0s;
-  
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-.container:not(.menu-open-margin) {
-  transition-delay: 0.5s; /* espera que termine el menú antes de mover */
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+}
+
+.card-body .btn {
+    margin-top: auto;
+    /* Empuja el botón hacia abajo */
+}
+
+.card-text {
+    font-size: 13px;
+
+}
+
+.btn-carritonav {
+    min-height: 48px;
+}
+
+.boton-inicio {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-inicio:hover {
+    background-color: #0056b3;
 }
