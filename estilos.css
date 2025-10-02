@@ -3,7 +3,7 @@ body {
     background-image: url(imagenes/fondo.webp);
     display: flex;
     flex-direction: column;
-    
+
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
 
 header {
     text-align: center;
-    
+
 }
 
 a {
@@ -31,16 +31,30 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+/* 1. Estilos para PANTALLA GRANDE (Desktop) */
 .texto-contenedor {
-    width: 50%;
-    margin-bottom: 90px;
+  width: 50%;             /* Ocupa la mitad de la pantalla */
+  margin-left: auto;      /* Estas dos propiedades centran el bloque */
+  margin-right: auto;     /* en la página */
+  margin-bottom: 90px;    /* Mantiene tu espacio inferior */
+  text-align: center;     /* Y esto centra el texto DENTRO del bloque */
 }
+
+/* 2. Ajuste para PANTALLA PEQUEÑA (Móvil) */
+@media (max-width: 767px) {
+  .texto-contenedor {
+    width: 90%; /* En móviles, el bloque es más ancho para mejor lectura */
+  }
+}
+
 
 h2 {
     text-align: center;
     margin-bottom: 1rem;
-    
+
 }
+
+
 
 /* NUEVO: Clase de utilidad para centrar texto o elementos en línea */
 .text-center {
@@ -285,9 +299,6 @@ p {
         display: block;
     }
 
-    
-
-
 }
 
 
@@ -311,6 +322,11 @@ p {
 
 .card-text {
     font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 
 }
 
@@ -336,3 +352,21 @@ p {
 .boton-inicio:hover {
     background-color: #0056b3;
 }
+
+.map-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 para el mapa*/
+
+}
+
+.map-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+ /* estilos para que el mapa sea responsive */

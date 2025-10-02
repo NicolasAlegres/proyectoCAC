@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Prepara el HTML que se va a insertar.
     let cardsHTML = `
         <div class="container rounded py-2 mb-3" style="background-color: rgb(47, 83, 94);">
-            <div class="row justify-content-center flex-nowrap pb-1">`;
+            <div class="row justify-content-center pb-1">`;
 
 
     // 4. Recorre cada libro de la categoría y crea una tarjeta para él.
     librosDeCategoria.forEach(libro => {
         // Usamos plantillas de texto (template literals) para construir el HTML de forma más limpia.
         cardsHTML += `
-            <div class="col-4">
-                <div class="card w-100">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 ">
+                <div class="card h-100">
                     <img src="${libro.imagen}" class="card-img-top" alt="${libro.nombre}">
                     <div class="card-body">
                         <h5 class="card-title">Breve reseña</h5>
