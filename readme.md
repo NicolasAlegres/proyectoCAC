@@ -4,7 +4,7 @@ Este es el proyecto final para el curso de JavaScript de Codo a Codo, una aplica
 
 ## 🚀 Demo en Vivo
 
-Puedes ver el proyecto desplegado en Netlify: **[Somos Arte](https://somos-arte.netlify.app/)**
+Podés ver el proyecto desplegado en Netlify: **[Somos Arte](https://somos-arte.netlify.app/)**
 
 ---
 
