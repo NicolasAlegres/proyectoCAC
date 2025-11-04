@@ -13,7 +13,7 @@ Puedes ver el proyecto desplegado en Netlify: **[Somos Arte](https://somos-arte.
 - **Renderizado Dinámico de Productos:** Las tarjetas de los libros se generan dinámicamente usando JavaScript a partir de un array de objetos, simulando la carga desde una API.
 - **Carrito de Compras Persistente:**
   - Añade y elimina productos del carrito.
-  - El estado del carrito se mantiene al navegar entre páginas y al recargar, gracias al uso de `localStorage`.
+  - El estado del carrito se mantiene al navegar entre páginas y al recargar, o cerrar la pestaña gracias al uso de `localStorage`.
   - El contador de productos en el navbar se actualiza en tiempo real.
 - **Componentes Reutilizables:** El `navbar` y el `footer` se cargan dinámicamente en todas las páginas mediante `fetch`, evitando la duplicación de código HTML y facilitando el mantenimiento.
 - **Diseño Responsivo (Mobile-First):** La interfaz está diseñada para ser completamente funcional y estéticamente agradable en cualquier dispositivo, desde móviles hasta escritorios.
@@ -49,6 +49,26 @@ Este proyecto no requiere un proceso de compilación ni dependencias complejas. 
     Abre el archivo `index.html` en tu navegador web preferido. La forma más sencilla es arrastrar y soltar el archivo en una ventana del navegador.
 
 ---
+
+## Manejo de Formulario
+
+El formulario se maneja con formspree, lo cuál lo hace funcional y operativo.
+
+---
+
+## Scripts y su Función
+
+- **`main.js`:** carga todos los componentes. nav, footer y la logica del sitio.
+
+- **`libros.js`:** carga todos los productos, simula una base de datos.
+
+- **`formulario.js`:** prepara el resumen del pedido del cliente en la página de confirmación.
+
+- **`carrito.js`:** carga la logica del carrito de compras. 
+
+---
+
+
 
 ## 🚀 Despliegue
 

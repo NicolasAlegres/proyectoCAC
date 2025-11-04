@@ -2,7 +2,7 @@
 
 // Función para actualizar el contador del carrito en el icono
 function actualizarContador() {
-    const carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const contadorElemento = document.getElementById("contador-carrito");
     if (contadorElemento) { // Solo actualiza si el elemento existe
         contadorElemento.textContent = carrito.length;
@@ -14,7 +14,7 @@ document.querySelectorAll(".agregar-btn").forEach(btn => {
     btn.addEventListener("click", function (e) {
         e.preventDefault();
 
-        let carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
         const producto = {
             id: this.dataset.id,
@@ -23,7 +23,7 @@ document.querySelectorAll(".agregar-btn").forEach(btn => {
         };
 
         carrito.push(producto);
-        sessionStorage.setItem("carrito", JSON.stringify(carrito));
+        localStorage.setItem("carrito", JSON.stringify(carrito));
 
         actualizarContador();
         
@@ -33,7 +33,7 @@ document.querySelectorAll(".agregar-btn").forEach(btn => {
 
 // Mostrar productos dentro del modal/carrito popup
 function mostrarProductosEnModal() {
-    const carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const contenedor = document.getElementById("productosCarrito");
     contenedor.innerHTML = "";
 
@@ -55,9 +55,9 @@ function mostrarProductosEnModal() {
     document.querySelectorAll(".eliminarProducto").forEach(btn => {
         btn.addEventListener("click", e => {
             const index = e.target.getAttribute("data-index");
-            let carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
             carrito.splice(index, 1);
-            sessionStorage.setItem("carrito", JSON.stringify(carrito));
+            localStorage.setItem("carrito", JSON.stringify(carrito));
             actualizarContador();
             mostrarProductosEnModal();
         });
@@ -89,7 +89,7 @@ window.addEventListener("click", (e) => {
 
 // Botón finalizar compra: guarda carrito para el formulario y redirige a la página de compra
 document.getElementById("finalizarCompra").addEventListener("click", () => {
-    const carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     if (carrito.length === 0) {
         alert("Tu carrito está vacío.");
@@ -97,10 +97,10 @@ document.getElementById("finalizarCompra").addEventListener("click", () => {
     }
 
     // Guardar carrito para la página de formulario (para mostrar el resumen)
-    sessionStorage.setItem("carritoParaCompra", JSON.stringify(carrito));
+    localStorage.setItem("carritoParaCompra", JSON.stringify(carrito));
 
     // **NUEVO: Limpiar el carrito en la página principal ANTES de redirigir**
-    sessionStorage.removeItem("carrito"); // Limpia el carrito principal
+    localStorage.removeItem("carrito"); // Limpia el carrito principal
     
 
     // Actualizar el contador del carrito visible inmediatamente

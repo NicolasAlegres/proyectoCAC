@@ -1,373 +1,341 @@
 body {
-    background-color: rgba(75, 145, 224, 0.623);
-    background-image: url(imagenes/fondo.webp);
-    display: flex;
-    flex-direction: column;
+  background-color: rgba(75, 145, 224, 0.623);
+  background-image: url(imagenes/fondo.webp);
+  display: flex;
+  flex-direction: column;
 
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Asegura que el footer se quede abajo */
-#footer-placeholder {
-    margin-top: auto;
+.footer {
+  margin-top: auto;
+  padding: 0;
+  text-align: center;
+  line-height: 1;
 }
 
-
 header {
-    text-align: center;
-
+  text-align: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header h1 {
-
-    margin: 0;
-    margin-bottom: 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 /* 1. Estilos para PANTALLA GRANDE (Desktop) */
 .texto-contenedor {
-  width: 50%;             /* Ocupa la mitad de la pantalla */
-  margin-left: auto;      /* Estas dos propiedades centran el bloque */
-  margin-right: auto;     /* en la página */
-  margin-bottom: 90px;    /* Mantiene tu espacio inferior */
-  text-align: center;     /* Y esto centra el texto DENTRO del bloque */
+  width: 50%; /* Ocupa la mitad de la pantalla */
+  margin-left: auto; /* Estas dos propiedades centran el bloque */
+  margin-right: auto; /* en la página */
+  margin-bottom: 90px; /* Mantiene tu espacio inferior */
+  text-align: center; /* Y esto centra el texto DENTRO del bloque */
 }
 
-/* 2. Ajuste para PANTALLA PEQUEÑA (Móvil) */
+/* 2. Ajuste para PANTALLA PEQUEÑA (celulares) */
 @media (max-width: 767px) {
   .texto-contenedor {
     width: 90%; /* En móviles, el bloque es más ancho para mejor lectura */
   }
 }
 
-
 h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-
+  text-align: center;
+  margin-bottom: 10px;
 }
-
-
 
 /* NUEVO: Clase de utilidad para centrar texto o elementos en línea */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-.redes-pos {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
 
 .redes-sociales-iconos {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    margin-bottom: 10px;
-    padding: 1rem;
-
-    background: linear-gradient(to right,
-            rgba(0, 0, 0, 0) 0%,
-            /* Transparente al inicio */
-            #007bff 15%,
-            /* Tu color azul al 15% */
-            #007bff 85%,
-            /* Tu color azul hasta el 85% */
-            rgba(0, 0, 0, 0) 100%);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  padding: 1rem;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    /* Transparente al inicio */ #007bff 15%,
+    /* Tu color azul al 15% */ #007bff 85%,
+    /* Tu color azul hasta el 85% */ rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .card-img-top {
-    width: 100%;
-    aspect-ratio: 8 / 9;
-    object-fit: cover;
-    object-position: center;
-
+  width: 100%;
+  aspect-ratio: 8 / 9;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Aplica box-sizing a todos los elementos para un mejor control de layout */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form-custom-bg {
+  max-width: 40vw;
 
-    max-width: 40vw;
-
-    width: 100%;
-    margin: 40px auto;
-    padding: 20px;
-
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
 }
-
 
 .form-container {
-    background-color: #f0f2f5;
+  background-color: #f0f2f5;
 
-    padding: 30px;
+  padding: 30px;
 
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
 
-    width: 100%;
+  width: 100%;
 
-    margin: 0 auto;
-
+  margin: 0 auto;
 }
 
-
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .submit-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-    /* El botón ocupa todo el ancho */
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  /* El botón ocupa todo el ancho */
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 @media (max-width: 767px) {
-
-    /* Ajustes para la CAJA AZUL EXTERIOR en móviles */
-    .form-custom-bg {
-        max-width: 100%;
-        /* Fuerza a que ocupe el 100% del ancho disponible */
-        margin: 20px 0;
-        /* ¡¡¡CLAVE!!! Elimina los márgenes laterales (left/right) 'auto'
+  /* Ajustes para la CAJA AZUL EXTERIOR en móviles */
+  .form-custom-bg {
+    max-width: 100%;
+    /* Fuerza a que ocupe el 100% del ancho disponible */
+    margin: 20px 0;
+    /* ¡¡¡CLAVE!!! Elimina los márgenes laterales (left/right) 'auto'
                            y da solo un margen vertical en móviles. */
-        border-radius: 0;
-        /* Opcional: Elimina el redondeo para que sea totalmente de borde a borde */
-        padding-left: 15px;
-        /* Añade un pequeño padding interno para el contenido, como Bootstrap */
-        padding-right: 15px;
-    }
+    border-radius: 0;
+    /* Opcional: Elimina el redondeo para que sea totalmente de borde a borde */
+    padding-left: 15px;
+    /* Añade un pequeño padding interno para el contenido, como Bootstrap */
+    padding-right: 15px;
+  }
 
-    /* Opcional: ajustar el padding de la caja blanca del formulario en celulares */
-    .form-container {
-        padding: 20px;
-        /* Reduce el padding interno si lo deseas */
-        border-radius: 0;
-        /* Opcional: Si el padre no tiene redondeo, este tampoco */
-    }
+  /* Opcional: ajustar el padding de la caja blanca del formulario en celulares */
+  .form-container {
+    padding: 20px;
+    /* Reduce el padding interno si lo deseas */
+    border-radius: 0;
+    /* Opcional: Si el padre no tiene redondeo, este tampoco */
+  }
 
-    /* otros ajustes para fuentes o inputs en móvil si lo necesitas */
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea,
-    .submit-button {
-        font-size: 0.95rem;
-        /* Ajusta el tamaño de fuente para móviles */
-    }
+  /* otros ajustes para fuentes o inputs en móvil si lo necesitas */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea,
+  .submit-button {
+    font-size: 0.95rem;
+    /* Ajusta el tamaño de fuente para móviles */
+  }
 }
-
 
 /* MENU RESPONSIVO */
 
 .menu {
-    background-color: #222;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    flex-wrap: wrap;
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
 }
 
 .menu .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .menu ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-
 .menu ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .menu ul li a:hover {
-    color: #00ff88;
+  color: #00ff88;
 }
 
 /* Botón hamburguesa */
 .menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .menu-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    /* Espacio entre el carrito y los enlaces */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Espacio entre el carrito y los enlaces */
 }
 
 /* RESPONSIVE: menú para celulares */
 @media (max-width: 768px) {
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #080808;
+    width: 100%;
+    padding: 1px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: max-height 0.7s ease;
+    transition-delay: 0.1s;
+    z-index: 1000;
+  }
 
-    .menu ul {
-        max-height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        background-color: #080808;
-        width: 100%;
-        padding: 1px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        transition: max-height 0.7s ease;
-        transition-delay: 0.1s;
-        z-index: 1000;
+  .menu.active ul {
+    max-height: 500px;
+    /* lo suficiente para mostrar todos los links */
+  }
 
-    }
-
-    .menu.active ul {
-        max-height: 500px;
-        /* lo suficiente para mostrar todos los links */
-
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
+  .menu-toggle {
+    display: block;
+  }
 }
 
-
 .card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 0.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
 }
 
 .card-body .btn {
-    margin-top: auto;
-    /* Empuja el botón hacia abajo */
+  margin-top: auto;
+  /* Empuja el botón hacia abajo */
 }
 
 .card-text {
-    font-size: 13px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
 }
 
 .btn-carritonav {
-    min-height: 48px;
+  min-height: 48px;
 }
 
 .boton-inicio {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .boton-inicio:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 iframe {
-  width: 100%;      /* Ocupa el 100% del ancho de la pantalla */
-  height: 450px;    /* Le damos una altura fija razonable para móviles */
-  border: 0;        /* Quitamos el borde que a veces traen */
-  display: block;   /* Ayuda a que el margen funcione bien */
-  margin: auto; 
+  width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+  height: 450px; /* Le damos una altura fija razonable para móviles */
+  border: 0; /* Quitamos el borde que a veces traen */
+  display: block; /* Ayuda a que el margen funcione bien */
+  margin: auto;
 }
 
+/* estilos para que el mapa sea responsive */
 
- /* estilos para que el mapa sea responsive */
-
-
- @media (min-width: 800px) {
+@media (min-width: 800px) {
   iframe {
-    width: 800px;   /* Tu ancho deseado */
-    height: 600px;  /* Tu alto deseado */
+    width: 800px; /* Tu ancho deseado */
+    height: 600px; /* Tu alto deseado */
   }
+}
+
+.bg-contact-form {
+  background-color: rgb(206, 233, 243);
 }
